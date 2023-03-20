@@ -1,10 +1,8 @@
-SOA zone reverse
-
 $ORIGIN 0.168.192.in-addr.arpa.
 $TTL 86400
-@       IN      SOA     soa.woodytoys.lab.      hostmaster.woodytoys.lab. (
+@       IN      SOA     soa.woodytoys.lab       hostmaster.woodytoys.lab (
                         2001062501 ; serial
-                        21600      ; refresh after 6 hours
+                        21600      ; refresh after 6 hour
                         3600       ; retry after 1 hour
                         604800     ; expire after 1 week
                         86400 )    ; minimum TTL of 1 day
@@ -15,3 +13,4 @@ $TTL 86400
 3       IN      PTR     dhcp.woodytoys.lab.
 4       IN      PTR     www.woodytoys.lab.
 5       IN      PTR     mail.woodytoys.lab.
+
