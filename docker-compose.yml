@@ -1,35 +1,49 @@
-version: "3"
-services:
+version: '3'
 
-  web: # Nom du conteneur
-    image: nginx:alpine # Image du conteneur
-    links: # Liaison avec d'autres conteneurs
-      - db:database
-    ports: # Port h^ote -> Port conteneur
-      - 80:80
-    networks: # R´eseau associ´e
-      - private-net
-
-  db:
-    image: mysql:5.7
-    environment: # Variables d'environnements
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: database
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
-    volumes:
-      - db-data:/var/lib/mysql
-    networks:
-      - private-net
-
-  dns:
-    image: ubuntu/bind9
-    ports:
-     - 53:53/udp
-     - 53:53
-
-volumes: # D´efinition des volumes
-  db-data:
 networks:
-  private-net:
-  other-net: 
+  local:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+         - subnet: 172.17.0.0/24
+
+services:
+  user1:
+    build: ./user1
+    networks:
+      local:
+        ipv4_address: 172.17.0.4
+    tty: true
+    container_name: user1
+    hostname: user1
+    dns: 172.17.0.2
+
+  user2:
+    build: ./user2
+    networks:
+      local:
+        ipv4_address: 172.17.0.5
+    tty: true
+    container_name: user2
+    hostname: user2
+    dns: 172.17.0.2
+
+  resolver:
+    build: ./resolver
+    networks:
+      local:
+        ipv4_address: 172.17.0.2
+    tty: true
+    container_name: resolver
+    hostname: resolver
+    dns: 172.17.0.2
+
+  soa:
+    build: ./soa
+    networks:
+      local:
+        ipv4_address: 172.17.0.3
+    tty: true
+    container_name: soa
+    hostname: soa 
