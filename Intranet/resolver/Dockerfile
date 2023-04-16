@@ -14,5 +14,5 @@ COPY named.conf /etc/bind/
 EXPOSE 53/udp 53/tcp
 CMD ["named", "-g"]
 
-ENTRYPOINT ["tail"]
-CMD ["-f","/dev/null"]
+#ENTRYPOINT ["tail"]
+#CMD ["-f","/dev/null"]
