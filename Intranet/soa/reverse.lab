@@ -1,4 +1,4 @@
-$ORIGIN woodytoys.lab.
+$ORIGIN 0.17.172.in-addr.arpa.
 $TTL 86400
 @     IN     SOA    soa.woodytoys.lab.     hostmaster.woodytoys.lab. (
                     2001062501 ; serial
@@ -7,9 +7,7 @@ $TTL 86400
                     604800     ; expire after 1 week
                     86400 )    ; minimum TTL of 1 day
 
-      IN     NS     soa.woodytoys.lab.
+        IN      NS      soa.woodytoys.lab.
 
-
-resolver          IN     A       172.17.0.2
-soa             IN     A       172.17.0.3
-
+2       IN      PTR     resolver.woodytoys.lab.
+3       IN      PTR     soa.woodytoys.lab.
