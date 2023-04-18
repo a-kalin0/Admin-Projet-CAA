@@ -12,4 +12,5 @@ $TTL 86400
 
 resolver          IN     A       172.17.0.2
 soa             IN     A       172.17.0.3
+www             IN     A       172.17.0.4
 

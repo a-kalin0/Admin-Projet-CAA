@@ -11,3 +11,4 @@ $TTL 86400
 
 2       IN      PTR     resolver.woodytoys.lab.
 3       IN      PTR     soa.woodytoys.lab.
+4       IN      PTR     www.woodytoys.lab.
