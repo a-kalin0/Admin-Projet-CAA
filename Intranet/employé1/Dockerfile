@@ -9,6 +9,7 @@ RUN apt install traceroute -y
 RUN apt install dnsutils -y
 RUN apt install links -y
 RUN apt install tcpdump -y
+RUN apt install mutt -y
 
 ENTRYPOINT ["tail"]
 CMD ["-f","/dev/null"]
