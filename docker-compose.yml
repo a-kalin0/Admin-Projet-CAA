@@ -58,6 +58,8 @@ services:
     container_name: web
     hostname: web
     dns: 172.20.1.2
+    depends_on: db
+
 
   mail:
     build: ./Intranet/mail

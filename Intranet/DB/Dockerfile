@@ -6,16 +6,16 @@ MAINTAINER 2TL1
 RUN chown -R mysql:root /var/lib/mysql/
 
 #Passer les variable d'environement en argument pour la ligne de commande
-#ARG MYSQL_DATABASE
-#ARG MYSQL_USER
-#ARG MYSQL_PASSWORD
-#ARG MYSQL_ROOT_PASSWORD
+ARG MYSQL_DATABASE
+ARG MYSQL_USER
+ARG MYSQL_PASSWORD
+ARG MYSQL_ROOT_PASSWORD
 
 #Crée une variable d'environement pour le mot de passe de la db
-ENV MYSQL_DATABASE=test
+ENV MYSQL_DATABASE=db
 ENV MYSQL_USER=user
 ENV MYSQL_PASSWORD=user123
-ENV MYSQL_ROOT_PASSWORD=admin
+ENV MYSQL_ROOT_PASSWORD=321resu
 
 COPY test.sql /mysql/test.sql
 
