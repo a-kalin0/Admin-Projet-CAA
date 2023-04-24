@@ -13,9 +13,9 @@ ARG MYSQL_ROOT_PASSWORD
 
 #Crée une variable d'environement pour le mot de passe de la db
 ENV MYSQL_DATABASE=db
-ENV MYSQL_USER=user
-ENV MYSQL_PASSWORD=user123
-ENV MYSQL_ROOT_PASSWORD=321resu
+ENV MYSQL_USER=roott
+ENV MYSQL_PASSWORD=roott
+ENV MYSQL_ROOT_PASSWORD=roott
 
 COPY test.sql /mysql/test.sql
 

@@ -4,11 +4,11 @@
 
 // Connexion à la base de données
 $servername = "172.20.1.2";
-$username = "user";
-$password = "user123";
-$dbname = "db";
+$username = "roott";
+$password = "roott";
 
-$conn = new MySQLi($servername, $username, $password, $dbname);
+
+$conn = new MySQLi($servername, $username, $password);
 
 // Vérification de la connexion
 if ($conn->connect_error) {
