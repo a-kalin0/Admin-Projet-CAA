@@ -3,12 +3,12 @@
 <?php
 
 // Connexion à la base de données
-$servername = "localhost";
+$servername = "172.20.1.2";
 $username = "user";
-$password = "password";
-$dbname = "database";
+$password = "user123";
+$dbname = "db";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new MySQLi($servername, $username, $password, $dbname);
 
 // Vérification de la connexion
 if ($conn->connect_error) {
