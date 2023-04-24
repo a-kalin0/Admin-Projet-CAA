@@ -19,7 +19,7 @@ ENV MYSQL_ROOT_PASSWORD=321resu
 
 COPY test.sql /mysql/test.sql
 
-RUN sed -i 's/MYSQL_DATABASE/'$MYSQL_DATABASE'/g' /etc/mysql/data.sql
-RUN cp /etc/mysql/data.sql /docker-entrypoint-initdb.d
+RUN sed -i "s/MYSQL_DATABASE/'db'/g" /mysql/test.sql
+RUN cp /mysql/test.sql /docker-entrypoint-initdb.d
 
 EXPOSE 3306

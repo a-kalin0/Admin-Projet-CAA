@@ -1,16 +1,29 @@
 -- MySQL dump 10.13  Distrib 8.0.26, for Linux (x86_64)
 -- DROP TABLE IF EXISTS Customers;
-/!40101 SET @saved_cs_client     = @@character_set_client/;
-/!50503 SET character_set_client = utf8mb4/;
-CREATE DATABASE db;
+/*!40101 SET @saved_cs_client = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+
+-- Créer la base de données
+CREATE DATABASE IF NOT EXISTS db;
 USE db;
-CREATE TABLE inventory (id INT AUTO_INCREMENT PRIMARY KEY,name varchar(255) DEFAULT NULL,price FLOAT(10) DEFAULT NULL);
 
-INSERT INTO inventory VALUES (NULL, 'PS5' , 11.50);
-INSERT INTO inventory VALUES (NULL, 'Balancoire' , 5.36);
-INSERT INTO inventory VALUES (NULL, 'Dames' , 9.99);
+-- Créer la table
+CREATE TABLE IF NOT EXISTS inventory (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  price FLOAT(10, 2) NOT NULL
+);
 
-CREATE USER 'userdb'@'%' IDENTIFIED BY 'Zh0qtDbBRiKsmX4V8dES';
- 
+-- Insérer des données dans la table
+INSERT INTO inventory (name, price) VALUES
+  ('PS5', 11.50),
+  ('Balancoire', 5.36),
+  ('Dames', 9.99);
+
+-- Créer un utilisateur pour accéder à la base de données
+CREATE USER IF NOT EXISTS 'userdb'@'%' IDENTIFIED BY 'Zh0qtDbBRiKsmX4V8dES';
+
+-- Accorder tous les privilèges à l'utilisateur sur la base de données
 GRANT ALL PRIVILEGES ON db.* TO 'userdb'@'%';
+
 

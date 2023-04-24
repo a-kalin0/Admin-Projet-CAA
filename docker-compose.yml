@@ -58,7 +58,8 @@ services:
     container_name: web
     hostname: web
     dns: 172.20.1.2
-    depends_on: db
+    depends_on: 
+      - db
 
 
   mail:
@@ -79,12 +80,12 @@ services:
     environment: 
       - maildomain=woodytoys.lab
 
-#  db:
-#    build: ./db
-#    networks:
-#      local:
-#        ipv4_address: 192.168.0.7
-#    tty: true
-#    container_name: db
-#    hostname: db 
-#    dns: 192.168.0.3
+  db:
+    build: ./Intranet/db
+    networks:
+      local:
+        ipv4_address: 172.20.1.6
+    tty: true
+    container_name: db
+    hostname: db 
+    dns: 172.20.1.2
