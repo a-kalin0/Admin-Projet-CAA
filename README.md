@@ -29,8 +29,6 @@ CMD ["-f","/dev/null"]
 
 Checklist : 
 
-- Service Web et DB
-- Service mail 
 - Hébergement Cloud (trouver une solution gratuite)
 - Rédaction des services + cloud
 - Zone Public + Délégation 
