@@ -3,16 +3,16 @@
 <?php
 
 // Connexion à la base de données
-$servername = "172.20.1.2";
+$servername = "172.20.1.6";
 $username = "roott";
 $password = "roott";
+$dbname = "db";
 
-
-$conn = new MySQLi($servername, $username, $password);
+$conn = new MySQLi($servername, $username, $password, $dbname);
 
 // Vérification de la connexion
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+  die("The connection failed: " . $conn->connect_error);
 }
 
 // Récupération des données de la table "inventory"
