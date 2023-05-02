@@ -1,6 +1,17 @@
 # Admin-Projet-CAA
 Projet Admin 2022-2023
 
+Checklist : 
+
+- Hébergement Cloud (trouver une solution gratuite) ==> EN COURS
+- Rédaction doc des services + cloud ==> EN COURS
+- Zone Public + Délégation ==> A FAIRE 
+- Résolveur + autres services publics à mettre en place ==> A FAIRE
+- Analyses de sécurité ==> A FAIRE
+- Si possible : valider les analyses et schémas de bases ==> BONUS
+- Sécurité infrastructure
+
+
 Commandes Utiles : 
 
 - Supprimer un répertoire non vide      : rm -r [nom du répertoire]
@@ -27,10 +38,5 @@ CMD ["-f","/dev/null"]
 * L'étudiant comprend et est capable d'appliquer (démo) les procédures documentée.
 
 
-Checklist : 
 
-- Hébergement Cloud (trouver une solution gratuite)
-- Rédaction des services + cloud
-- Zone Public + Délégation 
-- Résolveur + autres services publics à mettre en place
 
