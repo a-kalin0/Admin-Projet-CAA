@@ -81,7 +81,7 @@ services:
       - maildomain=woodytoys.lab
 
   db:
-    build: ./Intranet/db
+    build: ./Intranet/DB
     networks:
       local:
         ipv4_address: 172.20.1.6
@@ -89,3 +89,24 @@ services:
     container_name: db
     hostname: db 
     dns: 172.20.1.2
+
+
+  resolver_public:
+    build: ./Public/resolver_public
+    networks:
+      local:
+        ipv4_address: 172.20.2.2
+    tty: true
+    container_name: resolver_public
+    hostname: resolver_public
+    dns: 172.20.2.2
+
+  soa_public:
+    build: ./Public/soa_public
+    networks:
+      local:
+        ipv4_address: 172.20.2.3
+    tty: true
+    container_name: soa_public
+    hostname: soa_public
+    dns: 172.20.2.2
