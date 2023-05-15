@@ -3,11 +3,11 @@ Projet Admin 2022-2023
 
 Checklist : 
 
-- Hébergement Cloud (trouver une solution gratuite) ==> EN COURS
+- Hébergement Cloud (trouver une solution gratuite) ==> A CHECKER
 - Rédaction doc des services + cloud ==> EN COURS
-- Zone Public + Délégation ==> A FAIRE 
-- Résolveur + autres services publics à mettre en place ==> A FAIRE
-- Analyses de sécurité ==> A FAIRE
+- Zone Public + Délégation ==> EN COURS 
+- Résolveur + autres services publics à mettre en place ==> EN COURS
+- Analyses de sécurité ==> A CHECKER / AMELIORER
 - Si possible : valider les analyses et schémas de bases ==> BONUS
 - Sécurité infrastructure
 
@@ -27,15 +27,6 @@ CMD ["-f","/dev/null"]
 - Afficher tous les conteneurs  : docker ps -a
 - Afficher toutes les images    : docker images -a 
 
-- Concernant la rédaction des différents services de l'intranet + hébergement cloud : 
-
-* Le guide de maintenance est correctement rédigé (style, mise en page, orthographe)
-* Le guide de maintenance explique clairement l’organisation des configurations afin que le technicien chargé de la maintenance sache où il doit intervenir le cas échéant
-* Le guide de maintenance explique comment ajouter/supprimer/modifier des éléments dans le service/la plateforme (ex : arrivée d'un nouvel employé)
-* Le guide de maintenance explique comment mettre à jour les différents éléments du service/de la plateforme (ex : mise à jour du logiciel du serveur). La procédure doit être spécifique et ne pas consister en un simple "apt upgrade".
-* Le guide de maintenance indique comment trouver de l’information pour troubleshooter d’éventuels dysfonctionnements (logs)
-* Le guide de maintenance présente quelques erreurs fréquentes dans les configurations du service/de la plateforme et comment les corriger
-* L'étudiant comprend et est capable d'appliquer (démo) les procédures documentée.
 
 
 
