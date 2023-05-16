@@ -14,7 +14,7 @@ RUN apt install links -y
 RUN apt install tcpdump -y
 
 COPY named.conf /etc/bind/
-COPY l1-1.ephec-ti.be /etc/bind/
+COPY woodytoys.public.forward /etc/bind/
 
 EXPOSE 53/tcp/udp
 
