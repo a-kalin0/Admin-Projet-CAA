@@ -3,11 +3,11 @@ Projet Admin 2022-2023
 
 Checklist : 
 
-- Hébergement Cloud (trouver une solution gratuite) ==> A CHECKER
-- Rédaction doc des services + cloud ==> EN COURS
-- Zone Public + Délégation ==> EN COURS 
+- Hébergement Cloud (trouver une solution gratuite) ==> FAIT - Port 25 à solutionner pour mail
+- Rédaction doc des services + cloud ==> A VALIDER
+- Zone Public + Délégation ==> FAIT 
 - Résolveur + autres services publics à mettre en place ==> EN COURS
-- Analyses de sécurité ==> A CHECKER / AMELIORER
+- Analyses de sécurité ==> A AMELIORER
 - Si possible : valider les analyses et schémas de bases ==> BONUS
 - Sécurité infrastructure
 
