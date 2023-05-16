@@ -1,4 +1,4 @@
-$ORIGIN woodytoys.lab.
+$ORIGIN l1-1.ephec-ti.be
 $TTL 86400
 @     IN     SOA    ns.l1-1.ephec-ti.be.     hostmaster.l1-1.ephec-ti.be. (
                     2001062501 ; serial
@@ -10,7 +10,6 @@ $TTL 86400
       IN     NS     ns.l1-1.ephec-ti.be.
 
       IN     MX     10    mail.l1-1.ephec-ti.be.
-
 
 ns             IN     A       172.174.249.238
 www            IN     A       172.174.249.238
