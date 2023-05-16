@@ -1,4 +1,4 @@
-$ORIGIN l1-1.ephec-ti.be
+$ORIGIN l1-1.ephec-ti.be.
 $TTL 86400
 @     IN     SOA    ns.l1-1.ephec-ti.be.     hostmaster.l1-1.ephec-ti.be. (
                     2001062501 ; serial
