@@ -1,24 +1,18 @@
 version: '3'
 
 networks:
-  local:
+  default:
     driver: bridge
     ipam:
       driver: default
       config:
-         - subnet: 172.20.1.0/24
-  public:
-    driver: bridge
-    ipam:
-        driver : default
-        config:
-         - subnet: 172.20.3.0/24
+        - subnet: 172.20.1.0/24
 
 services:
   user1:
     build: ./Intranet/employé1
     networks:
-      local:
+      default:
         ipv4_address: 172.20.1.7
     tty: true
     container_name: user1
@@ -28,7 +22,7 @@ services:
   user2:
     build: ./Intranet/employé2
     networks:
-      local:
+      default:
         ipv4_address: 172.20.1.8
     tty: true
     container_name: user2
@@ -38,7 +32,7 @@ services:
   resolver:
     build: ./Intranet/resolver
     networks:
-      local:
+      default:
         ipv4_address: 172.20.1.2
     tty: true
     container_name: resolver
@@ -48,7 +42,7 @@ services:
   soa:
     build: ./Intranet/soa
     networks:
-      local:
+      default:
         ipv4_address: 172.20.1.3
     tty: true
     container_name: soa
@@ -58,8 +52,10 @@ services:
   web:
     build: ./Intranet/web
     networks:
-      local:
+      default:
         ipv4_address: 172.20.1.4
+    ports:
+      - "80:80"
     tty: true
     container_name: web
     hostname: web
@@ -67,70 +63,37 @@ services:
     depends_on: 
       - db
 
-
   mail:
     build: ./Intranet/mail
     networks:
-      local:
+      default:
         ipv4_address: 172.20.1.5
     tty: true
     container_name: mail
     hostname: mail 
     dns: 172.20.1.2
-    ports: 
-      - "25:25"
-      - "110:110"
-      - "465:465"
-      - "143:143"
-      - "993:993"
     environment: 
       - maildomain=woodytoys.lab
 
   db:
     build: ./Intranet/DB
     networks:
-      local:
+      default:
         ipv4_address: 172.20.1.6
     tty: true
     container_name: db
     hostname: db 
     dns: 172.20.1.2
 
-
-  resolver_public:
-    build: ./Public/resolver_public
-    networks:
-      public:
-        ipv4_address: 172.20.3.2
-    tty: true
-    container_name: resolver_public
-    hostname: resolver_public
-    dns: 172.20.3.2
-
   soa_public:
     build: ./Public/ns
     networks:
-      public:
-        ipv4_address: 172.20.3.3
+      default:
+        ipv4_address: 172.20.1.9
     ports:
-      - "53:53/udp"
-      - "53:53/tcp"
+      - "10.0.0.4:53:53/tcp"
+      - "10.0.0.4:53:53/udp"
     tty: true
     container_name: soa_public
     hostname: soa_public
-    dns: 172.20.3.2
-
-  #web_public:
-  #  build: ./Public/web_public
-  #  networks:
-  #    public:
-  #      ipv4_address: 172.20.3.4
-  #  ports:
-  #    - "80:80"
-  #    - "443:443"
-  #  tty: true
-  #  container_name: web_public
-  #  hostname: web_public
-  #  dns: 172.20.3.2
-  #  depends_on: 
-  #    - db
+    dns: 172.20.1.2

@@ -11,5 +11,6 @@ RUN apt install links -y
 RUN apt install tcpdump -y
 RUN apt install mutt -y
 
-ENTRYPOINT ["tail"]
-CMD ["-f","/dev/null"]
+RUN useradd -m -p user2 user2
+COPY .muttrc /home/user2/
+USER user2

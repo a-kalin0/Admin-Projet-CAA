@@ -12,8 +12,6 @@ $TTL 86400
       IN     MX     10    mail.l1-1.ephec-ti.be.
 
 
-resolver          IN     A       172.20.3.2
-ns             IN     A       172.20.3.3
-www             IN     A       172.20.3.4
-mail             IN     A       172.20.3.5
-db              IN      A       172.20.3.6
+ns             IN     A       172.174.249.238
+www            IN     A       172.174.249.238
+b2b            IN     A       172.174.249.238
