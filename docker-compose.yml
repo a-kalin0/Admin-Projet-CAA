@@ -14,7 +14,6 @@ services:
     networks:
       default:
         ipv4_address: 172.20.1.7
-    tty: true
     container_name: user1
     hostname: user1
     dns: 172.20.1.2
@@ -24,7 +23,6 @@ services:
     networks:
       default:
         ipv4_address: 172.20.1.8
-    tty: true
     container_name: user2
     hostname: user2
     dns: 172.20.1.2
@@ -34,7 +32,6 @@ services:
     networks:
       default:
         ipv4_address: 172.20.1.2
-    tty: true
     container_name: resolver
     hostname: resolver
     dns: 172.20.1.2
@@ -44,7 +41,6 @@ services:
     networks:
       default:
         ipv4_address: 172.20.1.3
-    tty: true
     container_name: soa
     hostname: soa 
     dns: 172.20.1.2
@@ -54,7 +50,6 @@ services:
     networks:
       default:
         ipv4_address: 172.20.1.4
-    tty: true
     container_name: web
     hostname: web
     dns: 172.20.1.2
@@ -66,7 +61,6 @@ services:
     networks:
       default:
         ipv4_address: 172.20.1.5
-    tty: true
     container_name: mail
     hostname: mail 
     dns: 172.20.1.2
@@ -78,7 +72,6 @@ services:
     networks:
       default:
         ipv4_address: 172.20.1.6
-    tty: true
     container_name: db
     hostname: db 
     dns: 172.20.1.2
@@ -91,10 +84,7 @@ services:
     ports:
       - "10.0.0.4:53:53/tcp"
       - "10.0.0.4:53:53/udp"
-    tty: true
     container_name: soa_public
-    hostname: soa_public
-    dns: 172.20.1.2
 
   web_public:
     build: ./Public/web_public
@@ -103,9 +93,6 @@ services:
         ipv4_address: 172.20.1.10
     ports:
       - "80:80"
-    tty: true
     container_name: web_public
-    hostname: web_public
-    dns: 172.20.1.2
     depends_on:
       - db
