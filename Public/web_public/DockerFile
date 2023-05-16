@@ -1,16 +1,6 @@
 FROM php:8.0-apache
 Maintainer 2TL1
 
-RUN apt update -y
-RUN apt install net-tools -y
-RUN apt install nano -y
-RUN apt install iputils-ping -y
-RUN apt install traceroute -y
-RUN apt install dnsutils -y
-RUN apt install traceroute -y
-RUN apt install links -y
-RUN apt install tcpdump -y
-
 COPY apache2.conf /etc/apache/
 COPY ./index.php /var/www/html
 
