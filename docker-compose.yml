@@ -97,3 +97,17 @@ services:
     container_name: soa_public
     hostname: soa_public
     dns: 172.20.1.2
+
+  web_public:
+    build: ./Public/web_public
+    networks:
+      default:
+        ipv4_address: 172.20.1.10
+    ports:
+      - "80:80"
+    tty: true
+    container_name: web_public
+    hostname: web_public
+    dns: 172.20.1.2
+    depends_on: 
+      - db
