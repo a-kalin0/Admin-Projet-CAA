@@ -1,5 +1,3 @@
-<?php echo 'Bienvenue sur le site de Woodytoys ! (publique)'; ?>
-
 <?php
 
 // Connexion à la base de données
