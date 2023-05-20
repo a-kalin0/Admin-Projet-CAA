@@ -1,3 +1,5 @@
+<?php echo 'Bienvenue sur le site de Woodytoys ! (b2b)'; ?>
+
 <?php
 
 // Connexion à la base de données
