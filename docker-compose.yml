@@ -82,8 +82,8 @@ services:
       default:
         ipv4_address: 172.20.1.9
     ports:
-      - "10.0.0.4:53:53/tcp"
-      - "10.0.0.4:53:53/udp"
+      - "193.70.112.34:53:53/tcp"
+      - "193.70.112.34:53/udp"
     container_name: soa_public
 
   web_public:
