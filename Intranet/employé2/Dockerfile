@@ -11,7 +11,7 @@ RUN apt install links -y
 RUN apt install tcpdump -y
 RUN apt install mutt -y
 
-RUN adduser anthony && echo "anthony:anthony" | chpasswd
+RUN useradd -m -p anthony anthony
 
 COPY .muttrc /home/anthony/.muttrc
 USER anthony
