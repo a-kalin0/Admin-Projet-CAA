@@ -3,9 +3,7 @@ Projet Admin 2022-2023
 
 Checklist : 
 
-- Hébergement VPS
 - Rédaction doc des services + cloud ==> FAIRE PUBLIC
-- Délégation ==> A REFAIRE
 - MAIL PUBLIC ==> EN COURS
 - Sécu dns + web + mail ==> A FAIRE
 - Si possible : valider les analyses et schémas de bases ==> A VALIDER
