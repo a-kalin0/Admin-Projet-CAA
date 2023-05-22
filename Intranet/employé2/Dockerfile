@@ -15,3 +15,6 @@ RUN adduser anthony && echo "anthony:anthony" | chpasswd
 
 COPY .muttrc /home/anthony/.muttrc
 USER anthony
+
+ENTRYPOINT ["tail"] 
+CMD ["-f","/dev/null"]

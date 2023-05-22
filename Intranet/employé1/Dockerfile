@@ -13,5 +13,8 @@ RUN apt install mutt -y
 
 RUN adduser arthur && echo "arthur:arthur" | chpasswd
 
-COPY .muttrc /home/arthur/.muttrc
+COPY .muttrc /home/arthur/
 USER arthur
+
+ENTRYPOINT ["tail"] 
+CMD ["-f","/dev/null"]
