@@ -3,13 +3,13 @@ Projet Admin 2022-2023
 
 Checklist : 
 
-- Hébergement Cloud (trouver une solution gratuite) ==> FAIT - Port 25 à solutionner pour mail
-- Rédaction doc des services + cloud ==> A VALIDER
-- Zone Public + Délégation ==> FAIT 
-- Résolveur + autres services publics à mettre en place ==> EN COURS
-- Analyses de sécurité ==> A AMELIORER
-- Si possible : valider les analyses et schémas de bases ==> BONUS
-- Sécurité infrastructure
+- Hébergement VPS
+- Rédaction doc des services + cloud ==> FAIRE PUBLIC
+- Délégation ==> A REFAIRE
+- MAIL PUBLIC ==> EN COURS
+- Sécu dns + web + mail ==> A FAIRE
+- Si possible : valider les analyses et schémas de bases ==> A VALIDER
+
 
 
 Commandes Utiles : 
