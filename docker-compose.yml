@@ -96,3 +96,13 @@ services:
     container_name: web_public
     depends_on:
       - db
+
+  mail_public:
+    build: ./Public/mail_public
+    networks:
+      default:
+        ipv4_address: 172.20.1.11
+    container_name: mail_public
+    hostname: mail 
+    environment: 
+      - maildomain=woodytoys.lab
