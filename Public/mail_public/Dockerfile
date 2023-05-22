@@ -9,9 +9,9 @@ RUN apt install postfix -y
 COPY dovecot.conf /etc/dovecot/
 COPY main.cf /etc/postfix/
 
-RUN adduser arthur && echo "arthur:arthur" | chpasswd
-RUN adduser anthony && echo "anthony:anthony" | chpasswd
-
 EXPOSE 25 143 110
+# AJOUTER DES PORTS ?
+
+RUN adduser woodytoys && echo "woodytoys:user123" | chpasswd
 
 CMD service postfix start && service dovecot start && tail -f /dev/null
