@@ -1,6 +1,6 @@
 #Utiliser l'image de base de mysql
 FROM mysql:latest
-MAINTAINER 2TL1
+MAINTAINER 2TL1-1
 
 #Lancer la base de données
 RUN chown -R mysql:root /var/lib/mysql/

@@ -1,5 +1,5 @@
 FROM ubuntu/bind9:latest
-MAINTAINER groupe1
+MAINTAINER 2TL1-1
 RUN mkdir -p /var/log/named
 RUN apt update -y
 RUN apt install net-tools -y
