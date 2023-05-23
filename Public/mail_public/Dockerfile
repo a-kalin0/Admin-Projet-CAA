@@ -3,8 +3,8 @@ FROM ubuntu:latest
 MAINTAINER 2TL1-1
 
 RUN apt update
-RUN apt install dovecot-imapd dovecot-pop3d -y
-RUN apt install postfix -y
+RUN apt install dovecot-imapd dovecot-pop3d -y 
+RUN apt install telnet postfix -y
 
 COPY dovecot.conf /etc/dovecot/
 COPY main.cf /etc/postfix/
