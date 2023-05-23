@@ -11,7 +11,7 @@ smtpd_banner = $myhostname ESMTP $mail_name
 
 # Network from which we accept smtp connexions
 # A CHANGER JE PENSE 
-mynetworks = 172.20.1.0/24 127.0.0.0/8 [::1]/128 193.70.112.34/24
+mynetworks = 172.20.1.0/24 127.0.0.0/8 [::1]/128 193.70.112.34
 smtpd_relay_restrictions = permit_mynetworks, reject
 
 #Log configuration
