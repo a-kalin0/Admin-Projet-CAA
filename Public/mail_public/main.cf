@@ -12,10 +12,10 @@ smtpd_banner = $myhostname ESMTP $mail_name
 # Network from which we accept smtp connexions
 
 mynetworks = 172.20.1.0/24 127.0.0.0/8 [::1]/128 
+
 smtpd_relay_restrictions = permit_mynetworks, reject
 
-#Log configuration
-maillog_file=/var/log/postfix.log
-#debug_peer_list = l1-1.ephec-ti.be
-#debug_peer_level = 5
-
+# Log configuration
+maillog_file = /var/log/postfix.log
+# debug_peer_list = l1-1.ephec-ti.be
+# debug_peer_level = 5
