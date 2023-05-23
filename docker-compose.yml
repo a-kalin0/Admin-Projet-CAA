@@ -102,7 +102,7 @@ services:
         ipv4_address: 172.20.1.11
     container_name: mail_public
     hostname: mail 
-    dns: 172.20.1.9
+    dns: 172.20.1.3
 
   user_public:
     build: ./Public/user1_public
@@ -111,4 +111,4 @@ services:
         ipv4_address: 172.20.1.12
     container_name: user_public
     hostname: user_public
-    dns: 172.20.1.9
+    dns: 172.20.1.3
