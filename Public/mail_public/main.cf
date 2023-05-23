@@ -1,5 +1,4 @@
 # Define server identity
-# A CHANGER JE PENSE
 myhostname = mail.woodytoys.lab
 mydomain = woodytoys.lab
 

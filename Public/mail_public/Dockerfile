@@ -9,8 +9,7 @@ RUN apt install postfix -y
 COPY dovecot.conf /etc/dovecot/
 COPY main.cf /etc/postfix/
 
-EXPOSE 25 143 110
-# AJOUTER DES PORTS ?
+EXPOSE 25 143 110 587 993
 
 RUN adduser woodytoys && echo "woodytoys:user123" | chpasswd
 
