@@ -105,7 +105,7 @@ services:
     container_name: mail_public
     hostname: mail 
     environment: 
-      - maildomain=woodytoys.lab
+      - maildomain=l1-1.ephec-ti.be
 
   user_public:
     build: ./Public/user1_public
