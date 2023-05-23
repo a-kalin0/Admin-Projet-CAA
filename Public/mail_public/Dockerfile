@@ -11,6 +11,6 @@ COPY main.cf /etc/postfix/
 
 EXPOSE 25 143 110 587 993
 
-RUN adduser woodytoys && echo "woodytoys:user123" | chpasswd
+RUN useradd -m -p woodytoys user123
 
 CMD service postfix start && service dovecot start && tail -f /dev/null
