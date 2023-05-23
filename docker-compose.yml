@@ -107,10 +107,10 @@ services:
     environment: 
       - maildomain=woodytoys.lab
 
-  user_public:
-    build: ./Public/user1_public
-    networks:
-      default:
-        ipv4_address: 172.20.1.12
-    container_name: user_public
-    hostname: user_public
+ # user_public:
+ #   build: ./Public/user1_public
+ #   networks:
+ #     default:
+ #       ipv4_address: 172.20.1.12
+ #   container_name: user_public
+ #   hostname: user_public
