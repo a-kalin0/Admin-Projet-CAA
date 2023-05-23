@@ -34,7 +34,6 @@ services:
         ipv4_address: 172.20.1.2
     container_name: resolver
     hostname: resolver
-    dns: 172.20.1.2
 
   soa:
     build: ./Intranet/soa
@@ -43,7 +42,6 @@ services:
         ipv4_address: 172.20.1.3
     container_name: soa
     hostname: soa 
-    dns: 172.20.1.2
 
   web:
     build: ./Intranet/web
@@ -52,7 +50,7 @@ services:
         ipv4_address: 172.20.1.4
     container_name: web
     hostname: web
-    dns: 172.20.1.2
+    dns: 172.20.1.3
     depends_on: 
       - db
 
@@ -63,7 +61,7 @@ services:
         ipv4_address: 172.20.1.5
     container_name: mail
     hostname: mail 
-    dns: 172.20.1.2
+    dns: 172.20.1.3
     environment: 
       - maildomain=woodytoys.lab
 
@@ -74,7 +72,7 @@ services:
         ipv4_address: 172.20.1.6
     container_name: db
     hostname: db 
-    dns: 172.20.1.2
+    dns: 172.20.1.3
 
   soa_public:
     build: ./Public/ns
