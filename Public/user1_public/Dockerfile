@@ -11,10 +11,11 @@ RUN apt install links -y
 RUN apt install tcpdump -y
 RUN apt install mutt -y
 
-RUN useradd -m -p woodytoys user123
+RUN useradd -m -p contact contact
 
-COPY .muttrc /home/woodytoys/
-USER woodytoys
+COPY .muttrc /home/contact/
+
+USER contact
 
 ENTRYPOINT ["tail"] 
 CMD ["-f","/dev/null"]

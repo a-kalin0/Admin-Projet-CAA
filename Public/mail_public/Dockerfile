@@ -11,6 +11,6 @@ COPY main.cf /etc/postfix/
 
 EXPOSE 25 143 110 587 993
 
-RUN useradd -m -p woodytoys user123
+RUN useradd -m -p contact contact
 
 CMD service postfix start && service dovecot start && tail -f /dev/null
