@@ -73,3 +73,22 @@ services:
     container_name: db
     hostname: db 
     dns: 172.20.1.3
+
+  user_public:
+    build: ./Public/user1_public
+    networks:
+      default:
+        ipv4_address: 172.20.1.12
+    container_name: user_public
+    hostname: user_public
+    dns: 172.20.1.3
+
+  soa_public:
+    build: ./Public/ns
+    networks:
+      default:
+        ipv4_address: 172.20.1.9
+    ports:
+      - "193.70.112.34:53:53/tcp"
+      - "193.70.112.34:53:53/udp"
+    container_name: soa_public
