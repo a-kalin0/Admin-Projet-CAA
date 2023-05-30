@@ -15,4 +15,6 @@ EXPOSE 25 143 110 587 993
 
 RUN useradd -rm -p $(openssl passwd -1 contact) contact
 
-CMD service postfix start && service dovecot start && tail -f /dev/null
+CMD service postfix start 
+CMD service dovecot start 
+CMD tail -f /dev/null
