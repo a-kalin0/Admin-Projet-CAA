@@ -12,7 +12,7 @@ RUN apt install tcpdump -y
 RUN apt install telnet -y
 RUN apt install mutt -y
 
-RUN useradd -m -p contact contact
+RUN useradd -rm -p $(openssl passwd -1 contact) contact
 
 COPY .muttrc /home/contact/
 
