@@ -74,7 +74,7 @@ services:
     hostname: db 
     dns: 172.20.1.3
 
-  soa_public:
+  ns:
     build: ./Public/ns
     networks:
       default:
