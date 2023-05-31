@@ -3,21 +3,16 @@ FROM ubuntu:latest
 MAINTAINER 2TL1-1
 
 RUN apt update
-RUN apt-get update && apt-get install -y postfix dovecot-imapd dovecot-pop3d dovecot-core -y
+RUN apt install dovecot-imapd dovecot-pop3d -y 
 RUN apt install iputils-ping -y
 RUN apt install dnsutils -y
-RUN apt install telnet 
-RUN apt install tcpdump -y
+RUN apt install telnet postfix -y
 
 COPY dovecot.conf /etc/dovecot/
 COPY main.cf /etc/postfix/
 
+EXPOSE 25 143 110 587 993
+
 RUN useradd -rm -p $(openssl passwd -1 contact) contact
 
-EXPOSE 143 110 465 993 995
-
-RUN postfix start
-RUN dovecot
-
-ENTRYPOINT ["tail"]
-CMD ["-f","/dev/null"]
+CMD service postfix start && service dovecot start && tail -f /dev/null
