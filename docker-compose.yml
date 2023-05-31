@@ -104,7 +104,6 @@ services:
     ports: 
       - "587:25"
       - "587:587"
-      - "25:25"
       - "110:110"
       - "143:143"
     container_name: mail_public
