@@ -17,12 +17,10 @@ RUN apt install traceroute -y
 RUN apt install links -y
 RUN apt install tcpdump -y
 
+RUN apt-get install -y certbot python3-certbot-apache
+
 COPY apache2.conf /etc/apache2/sites-available/apache2.conf
 COPY b2b.conf /etc/apache2/sites-available/b2b.conf
-
-#COPY certificate.crt /etc/ssl/certs/
-#COPY private.key /etc/ssl/certs/
-#COPY ca_bundle.crt /etc/ssl/certs/
 
 RUN a2ensite apache2.conf
 RUN a2ensite b2b.conf
