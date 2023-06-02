@@ -11,7 +11,7 @@ RUN apt install telnet postfix -y
 COPY dovecot.conf /etc/dovecot/
 COPY main.cf /etc/postfix/
 
-EXPOSE 25 143 110 587 993 
+EXPOSE 25 143 110 465 587 993 995 
 
 RUN useradd -rm -p $(openssl passwd -1 contact) contact
 

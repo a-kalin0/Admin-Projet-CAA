@@ -20,3 +20,6 @@ maillog_file=/var/log/postfix.log
 debug_peer_list = l1-1.ephec-ti.be
 debug_peer_level = 5
 
+smtpd_tls_key_file = ./private.key
+smtpd_tls_cert_file = ./certificate.crt
+smtpd_use_tls = yes
